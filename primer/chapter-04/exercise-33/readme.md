@@ -7,5 +7,7 @@ Using the operator precedence table, explain what the following expression does:
 
 It does this:
 
-    (someValue) ? (++x, ++y) : (--x, --y)
+    (someValue ? (++x, ++y) : --x), --y
+
+Because the comma operator has the lowest precedence of all operators.
 
