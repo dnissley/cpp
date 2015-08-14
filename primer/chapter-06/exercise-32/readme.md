@@ -1,0 +1,14 @@
+Exercise 6.32
+=============
+
+Indicate whether the following function is legal. If so, explain what it does; if not, correct any errors and then explain it.
+
+    int &get(int *arry, int index) { return arry[index]; }
+    int main() {
+        int ia[10];
+        for (int i = 0; i != 10; ++i)
+            get(ia, i) = i;
+    }
+
+The function is legal. Although ia is left uninitialized, it's undefined values are not read -- only referenced. In this way the array is initialized.
+
